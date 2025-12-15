@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "frontend",
+      "type": "shell",
+      "command": "npm",
+      "args": ["--prefix","frontend","run","dev"],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "backend",
+      "type": "shell",
+      "command": "npm",
+      "args": ["--prefix","backend","run","develop"],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "dev",
+      "type": "shell",
+      "command": "echo",
+      "args": ["Starting frontend and backend"],
+      "dependsOn": ["frontend","backend"]
+    }
+  ]
+}
